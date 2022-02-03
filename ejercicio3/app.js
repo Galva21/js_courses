@@ -1,6 +1,12 @@
-const lista = document.getElementById('lista')
+const lista = document.getElementById("lista");
+const elementos = ["a", "v", "s"];
 
-const li = document.createElement('li')
-li.textContent = 'primer elemento'
+elementos.forEach((i) => {
+    const li = document.createElement("li");
+    li.textContent = i;
+    lista.appendChild(li);
+});
 
-lista.appendChild(li)
+elementos.forEach((i) => {
+    lista.innerHTML += `<li> ${i} </li>`
+});
